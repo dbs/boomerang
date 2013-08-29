@@ -11,7 +11,8 @@ boomerang.factory('Config',function(){
             button : {
                 text : 'Register',
                 url : 'https://www.atendy.com/event/gdg-waterloo-devfest-80954845'
-            }
+            },
+            'url': '/images/gdg_sudbury.png'
         }
     }
 });
