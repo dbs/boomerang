@@ -2,7 +2,6 @@
     <p>&nbsp;</p>
     <div class="gdg_loading" ng-show="loading"></div>
     <div class="row">
-        <img ng-show="cover.url" class="span4 offset4" ng-src="{{cover.url}}">
         <div class="span12 hidden-phone" class="span12" id="cover" ng-show="cover.hasContent">
             <div id="cover-content">
                 <h1 class="span12">{{cover.title}}</h1>
@@ -13,6 +12,7 @@
             </div>
         </div>
         <hr>
-        <p class="span12" ng-bind-html-unsafe="desc"></p>
+        <p class="span6" ng-bind-html-unsafe="desc"></p>
+        <img ng-show="cover.url" class="span4" ng-src="{{cover.url}}">
     </div>
 </div>

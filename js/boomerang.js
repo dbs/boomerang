@@ -22,7 +22,7 @@ boomerang.controller('AboutControl', function( $scope, $http, $location, Config 
             console.log(data);
             $scope.desc = data.aboutMe;
             if(data.cover && data.cover.coverPhoto.url){
-                $scope.cover.url = data.cover.coverPhoto.url;
+                // $scope.cover.url = data.cover.coverPhoto.url;
             }
             $scope.loading = false;
         });
