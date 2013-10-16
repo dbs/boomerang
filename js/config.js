@@ -5,6 +5,11 @@ boomerang.factory('Config',function(){
         'id'            : '115803993493374365281',
         'google_api'    : 'AIzaSyAVnHtHIG-TFC2qr4YzDM7CkASGnDa02Fg',
         'pwa_id'        : '', //picasa web album id, must belong to google+ id above
+        'cover'         : {
+            'url': '/images/gdg_sudbury_square.png',
+            'hasContent': false
+        }
+        /*
         'cover' : {
             title : 'GDG DevFest Can-Am (Waterloo)',
             subtitle : 'The first Google Developer Group Conference in the Kitchener-Waterloo region!',
@@ -14,5 +19,6 @@ boomerang.factory('Config',function(){
             },
             'url': '/images/gdg_sudbury.png'
         }
+        */
     }
 });
