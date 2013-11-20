@@ -2,6 +2,7 @@ var boomerang = angular.module('gdgBoomerang', ['ngSanitize','ui.bootstrap'])
     .config(function($routeProvider) {
          $routeProvider.
              when("/about",  {templateUrl:'views/about.html', controller:"AboutControl"}).
+             when("/conduct",  {templateUrl:'views/conduct.html', controller:"ConductControl"}).
              when("/news", {templateUrl:'views/news.html', controller:"NewsControl"}).
              when("/events", {templateUrl:'views/events.html', controller:"EventsControl"}).
              otherwise({ redirectTo: '/about' });
@@ -27,6 +28,13 @@ boomerang.controller('AboutControl', function( $scope, $http, $location, Config 
             $scope.loading = false;
         });
 });
+
+boomerang.controller('ConductControl', function( $scope, $http, $location, Config ) {
+    $scope.loading = true;
+    $scope.$parent.activeTab = "conduct";
+    $scope.loading = false;
+});
+
 
 boomerang.controller("NewsControl", function($scope, $http, $timeout, Config) {
     $scope.loading = true;
