@@ -5,6 +5,7 @@ var boomerang = angular.module('gdgBoomerang', ['ngSanitize','ui.bootstrap'])
              when("/conduct",  {templateUrl:'views/conduct.html', controller:"ConductControl"}).
              when("/news", {templateUrl:'views/news.html', controller:"NewsControl"}).
              when("/events", {templateUrl:'views/events.html', controller:"EventsControl"}).
+             when("/techmakers",  {templateUrl:'views/techmakers.html', controller:"TechMakerControl"}).
              otherwise({ redirectTo: '/about' });
     });
 
@@ -35,6 +36,11 @@ boomerang.controller('ConductControl', function( $scope, $http, $location, Confi
     $scope.loading = false;
 });
 
+boomerang.controller('TechMakerControl', function( $scope, $http, $location, Config ) {
+    $scope.loading = true;
+    $scope.$parent.activeTab = "conduct";
+    $scope.loading = false;
+});
 
 boomerang.controller("NewsControl", function($scope, $http, $timeout, Config) {
     $scope.loading = true;
