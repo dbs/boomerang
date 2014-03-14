@@ -1,361 +1,590 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+    <title>reveal.js - The HTML Presentation Framework</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
 			}
-		</script>
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+  </head>
 
-	<body>
+  <body>
+    <div class="reveal">
 
-		<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+	<section>
+	  <h2>An Introduction to the Go Programming Language</h2>
+	  <!--<h3>HTML Presentations Made Easy</h3>-->
+	  <p><medium>By: Ellen Arteca, Emily Bamsey, Eryn Bielanski</medium></p>
+	</section>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+	<section>
+	  <h2>About this codelab</h2>
+	  <ul>
+	    <li>With the help of Aaron Langille, for supplying us with examples, the online tutorial ‘A Tour of Go’ and the playground, we were able to put together this hands on beginner’s guide to Go.</li>
+	    <li><b>Audience: </b>Beginner</li>
+	  </ul>
+	</section>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+	<section>
+	  <h2>Let's get started!</h2>
+	  <ul>
+	    <li>Head over to the playground <a href="http://golang.org/">http://golang.org/</a> to follow along and test out the examples as we go...</li>
+	  </ul>
+        </section>
+        
+	<!-- Packages -->
+	<section>
+	  <section>
+	    <h2>Packages</h2>
+	    <ul>
+	      <li>Every Go program is made up of packages</li>
+	      <li>Programs start running in package main</li>
+	      <li>By convention, the package name is the same as the last element of the import path</li>
+	    </ul>
+	  </section>
+	  <section>
+	    <h2>Packages - Example</h2>
+	    <pre><code data-trim>
+package main
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+import (
+	"fmt"
+)
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+func main() {
+	fmt.Println("Hello World!")
 }
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+	    </code></pre>
+	    <ul>
+	    	<li>First try the example without the "<code>package main</code>"</li>
+	    </ul>
+	  </section>
+	  <section>
+	  	<h2>Packages - Example Output</h2>
+	  	<ul>
+	  	<li>Without the "<code>package main</code>"</li>
+	  	<p style="color:red">
+	  	<small><code>prog.go:3: package statement must be first<br>
+ 			[process exited with non-zero status]</code></small>
+	  	</p>
+	  	<p style="color:#3366FF">
+	  	<small><code>Program exited.</code></small>
+	  	</p>
+	  	<li>With the "<code>package main</code>"</li>
+	  	<p>
+	  	<small><code>Hello World!</code></small>
+	  	</p>
+	  	<p style="color:#3366FF">
+	  	<small><code>Program exited.</code></small>
+	  	</p>
+	  	</ul>
+	  </section>
+	</section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+	<!-- Imports -->
+	<section>
+	  <section>
+	    <h2>Imports</h2>
+	    <ul>
+	      <li>Imports are needed to access additional packages</li>
+	      <li>Examples are:</li>
+	      <ul>
+	        <li>fmt - for printing</li>
+					<li>math - for math functions</li>
+					<li>rand - for random numbers</li>
+	      </ul>
+	      <li>Imports can be in the list form like the previous example</li>
+	      <li>... or imported individually like the next example</li>
+	    </ul>
+	  </section>
+	  <section>
+	    <h2>Imports - Example</h2>
+	    <pre><code data-trim>
+package main
 
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+import "fmt"
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
+func main() {
+	fmt.Println("Hello World!")
+}
+	    </code></pre>
+	  </section>
+	  <section>
+	  	<h2>Imports - Example Output</h2>
+	  	<p>
+	  	<small><code>Hello World!</code></small>
+	  	</p>
+	  	<p style="color:#3366FF">
+	  	<small><code>Program exited.</code></small>
+	  	</p>
+	  </section>
+	</section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+	<!-- Printing -->
+	<section>
+	  <section>
+	    <h2>Printing</h2>
+	    <ul>
+	    	<li>Printing is used to display information to the screen</li>
+	    	<li>Like other languages (C, C++), a package needs to be imported in order to call functions to print</li>
+	    	<li>Any printing needs to have the "fmt" package imported</li>
+	    </ul>
+	  </section>
+	  <section>
+	    <h2>Printing - Exercise</h2>
+	    <ul>
+	    	<li>Using the print function we are going to print the word "TECH"</li>
+	    </ul>
+	    <pre><code data-trim>
+package main
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+import "fmt"
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+func main() {
+	fmt.Println("TTTTT EEEEE CCCCC H   H")
+	fmt.Println("  T   E     C     H   H")
+	fmt.Println("  T   EEE   C     HHHHH")
+	fmt.Println("  T   E     C     H   H")
+	fmt.Println("  T   EEEEE CCCCC H   H")
+}
+	    </code></pre>
+	  </section>
+	  <section>
+	  	<h2>Printing - Exercise Output</h2>
+			<img src="print_exc.png" width="490" height="274"/>
+	  </section>
+	  <section>
+	  	<h2>Println VS. Print</h2>
+	  	<ul>
+	  		<li>Println - adds a new line automatically after your text</li>
+	  		<li>Print - appends the text to the end of the current line</li>
+	  		<li>To get a newline using the "<code>Print</code>"statement you need to put a "<code>\n</code>" where the newline should be</li>
+	  		<li>The "<code>\n</code>" trick can be used to cheat in Println statements as well to get multiple lines</li>
+	  	</ul>
+	  </section>
+	  <section>
+	  	<h2>Println VS. Print - Example</h2>
+	  	<pre><code data-trim>
+package main
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+import "fmt"
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+func main() {
+	fmt.Print("Greetings, ")
+	fmt.Print("human")
+	fmt.Print("\nHow is life on Earth?")
+}
+	  	</code></pre>
+	  </section>
+	  <section>
+	  	<h2>Println VS. Print - Example Output</h2>
+	  	<p>
+	  	<small><code>Greetings, human<br>
+How is life on Earth?</code></small>
+	  	</p>
+	  	<p style="color:#3366FF">
+	  	<small><code>Program exited.</code></small>
+	  	</p>
+	  </section>
+	</section>
+	
+	<!-- Variables -->
+	<section>
+		<section>
+			<h2>Variables</h2>
+			<ul>
+				<li>You can declare a variable type by using the "<code>var</code>" keyword followed by the variable name and finally the variable type</li>
+				<li>For example:</li>
+				<pre><code data-trim>
+var x int = 5
+				</code></pre>
+				<li>Alternativly, you can implicitly declare a variable and have the interpreter or compiler figure out the type itself</li>
+				<li>For example:</li>
+				<pre><code data-trim>
+x := 5
+				</code></pre>
+			</ul>
+		</section>
+		<section>
+			<h2>Variables - Example</h2>
+			<pre><code data-trim>
+package main
 
-			</div>
+import "fmt"
 
-		</div>
+func main() {
+	var x int = 5 //integer variable!
+	
+	y := 10 //Implicit declaration for integer variable
+	
+	var a, b, c string = "a", "b", "c" //Declaration of a list of strings
+	
+	i, j := "string", true //Implicit declaration of a string and a boolean
+	
+	//Print all the variables
+	fmt.Println("x:", x, "\ny:", y, "\na:", a, "\nb:", b, "\nc:", c, "\ni:", i, "\nj:", j)
+}		
+			</code></pre>
+		</section>
+		<section>
+			<h2>Variable - Example Output</h2>
+			<p style="text-align:left;">
+	  	<small><code>x: 5 <br>
+y: 10 <br>
+a: a  <br>
+b: b  <br>
+c: c  <br>
+i: string <br>
+j: true</code></small>
+	  	</p>
+	  	<p style="color:#3366FF; text-align:left;">
+	  	<small><code>Program exited.</code></small>
+	  	</p>
+		</section>
+	</section>
+	
+	<!-- Constants -->
+	<section>
+		<section>
+			<h2>Constants</h2>
+			<ul>
+				<li>Constants are just like variables, but you CAN'T change them!</li>
+				<pre><code data-trim>
+package main
+
+import "fmt"
+
+func main() {
+	const x = 5
+	const val = true
+	
+	fmt.Println("x:", x, "\nval:, val")
+}
+				</code></pre>
+				<li>Now try adding "<code>x = 6</code>" after the print and print out the x variable again</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Constants - Output</h2>
+			<ul>
+				<li>First Print</li>
+				<p>
+	  		<small><code>x: 5 <br>
+val: true</code></small>
+	  		</p>
+	  		<p style="color:#3366FF">
+	  		<small><code>Program exited.</code></small>
+	  		</p>
+	  		<li>After trying to change x</li>
+	  		<p style="color:red">
+	  		<small><code>prog.go:11: cannot assign to x<br>
+prog.go:11: cannot use 6 (type int) as type untyped number in assignment<br>
+ [process exited with non-zero status]</code></small>
+	  		</p>
+	  		<p style="color:#3366FF">
+	  		<small><code>Program exited.</code></small>
+	  		</p>
+			</ul>
+		</section>
+	</section>
+	
+	<!-- IF Statements -->
+	<section>
+		<section>
+			<h2>IF Statements</h2>
+			<ul>
+				<li>A control statement in which the result determines whether preceding statements will run or not</li>
+				<li>In Go brackets () are not required around the control statement</li>
+				<li>However, the braces {} surrounding the remaining statements are required</li>
+			</ul>
+		</section>
+		<section>
+			<h2>IF Statements - Example</h2>
+			<ul>
+				<li>Try out these basic IF statements</li>
+				<pre><code data-trim>
+package main
+
+import "fmt"
+
+func main() {
+	x := 10
+	
+	if x < 100 {
+		fmt.Println(x, "is less than 100")
+	}
+	
+	if !false {
+		fmt.Println("The opposite of false is true!")
+	}
+	
+	if true && x > 50 {
+		fmt.Println("Boolean AND!")
+	}
+	
+	if true || x > 50 {
+		fmt.Println("Boolean OR!")
+	}
+}
+				</code></pre>
+				<li>Which of these statements will print and which ones will not?</li>
+			</ul>
+		</section>
+		<section>
+			<h2>IF Statements - Example Output</h2>
+			<p>
+	  	<small><code>10 is less than 100<br>
+The opposite of false is true!<br>
+Boolean OR!</code></small>
+	  	</p>
+	  	<p style="color:#3366FF">
+	  	<small><code>Program exited.</code></small>
+	  	</p>
+		</section>
+		<section>
+			<h2>IF-ELSE Statements</h2>
+			<ul>
+				<li>When the condition of the IF statement is false, you can choose to have a different statement(s) run</li>
+				<li>These statements are surrounded by the ELSE statement</li>
+			</ul>
+		</section>
+		<section>
+			<h2>IF-ELSE Statements - Example</h2>
+			<ul>
+				<li>Placement of the ELSE statement matters!</li>
+				<pre><code data-trim>
+package main
+
+import "fmt"
+
+func main() {
+	
+	x := 10
+		
+	if x < 5 {
+		fmt.Println(x, "< 5")
+	}
+	else {
+		fmt.Println(x, ">=5")
+	}
+}
+				</code></pre>
+			</ul>
+		</section>
+		<section>
+			<h2>IF-ELSE Statements - Example</h2>
+			<ul>
+				<li>Now try moving the "<code>else {</code>" up one line so it looks like this:</li>
+				<pre><code data-trim>
+...
+	if x < 5 {
+		fmt.Println(x, "< 5")
+	} else {
+		fmt.Println(x, ">=5")
+	}
+}
+				</code></pre>
+			</ul>
+		</section>
+		<section>
+			<h2>IF-ELSE Statements - Example Output</h2>
+			<ul>
+				<li>On separate lines</li>
+				<p style="color:red">
+	  		<small><code>prog.go:12: syntax error: unexpected semicolon or newline before else<br>
+prog.go:15: syntax error: unexpected }<br>
+ [process exited with non-zero status]</code></small>
+	  		</p>
+	  		<p style="color:#3366FF">
+	  		<small><code>Program exited.</code></small>
+	  		</p>
+	  		<li>Inline</li>
+	  		<p>
+	  		<small><code>10 >=5</code></small>
+	  		</p>
+	  		<p style="color:#3366FF">
+	  		<small><code>Program exited.</code></small>
+	  		</p>
+			</ul>
+		</section>
+	</section>
+	
+	<!-- FOR Loops -->
+	<section>
+		<section>
+			<h2>FOR Loops</h2>
+			<ul>
+				<li>A loop iterates over a statement(s) a set number of times</li>
+				<li>A FOR loop needs to be given a start, a condition and a 'step counter'</li>
+			</ul>
+		</section>
+		<section>
+			<h2>FOR Loops - Example</h2>
+			<ul>
+				<li>We are going add the numbers from 0-9</li>
+				<pre><code data-trim>
+package main
+
+import "fmt"
+
+func main() {
+	sum := 0
+	for i := 0; i < 10; i++ {
+		sum += i
+	}
+	fmt.Println(sum)
+}
+				</code></pre>
+				<li>Why only until 9, when the condition says less than 10?</li>
+			</ul>
+		</section>
+		<section>
+			<h2>FOR Loops - Example Output</h2>
+			<p>
+	  	<small><code>45</code></small>
+	  	</p>
+	  	<p style="color:#3366FF">
+	  	<small><code>Program exited.</code></small>
+	  	</p>
+		</section>
+	</section>
+	
+	<!-- WHILE Loops -->
+	<section>
+		<section>
+			<h2>'WHILE' Loops</h2>
+			<ul>
+				<li>WHILE loops run until a condition is met to stop the loop</li>
+				<li>No start and no 'step counter'</li>
+				<li>Every FOR loop can be rewritten as a WHILE</li>
+			</ul>
+		</section>
+		<section>
+			<h2>'WHILE' Loops - Go Style</h2>
+			<ul>
+				<li>There is no actual 'WHILE' loop in Go, it's just a FOR without the start and 'step counter'</li>
+				<li>Let's print 'Hello World!' while i is less than 5</li>
+				<pre><code data-trim>
+package main
+
+import "fmt"
+
+func main() {
+	i := 0
+	for i < 5 {
+		fmt.Println("Hello World!")
+		i++
+	}
+}
+				</code></pre>
+			</ul>
+		</section>
+		<section>
+			<h2>'WHILE' Loops - Go Style Output</h2>
+			<p>
+	  	<small><code>Hello World!<br>
+Hello World!<br>
+Hello World!<br>
+Hello World!<br>
+Hello World!</code></small>
+	  	</p>
+	  	<p style="color:#3366FF">
+	  	<small><code>Program exited.</code></small>
+	  	</p>
+		</section>
+	</section>
+	
+	<!-- Functions -->
+	<section>
+		<section>
+			<h2>Functions</h2>
+			<ul>
+				<li>A named section of a program that performs a specific task</li>
+				<li>You can write functions yourself or they can be imported in packages</li>
+				<li>Examples of functions that are imported in packages are:</li>
+				<ul>
+					<li>Println - from the "fmt" package</li>
+					<li>sqrt - from the "math" package</li>
+				</ul>
+			</ul>
+		</section>
+		<section>
+			<h2>Functions - Writing your own</h2>
+			<ul>
+				<li>Funtion definitions start with the "<code>func</code>" keyword</li>
+				<li>The argument types need to be declared as well as the return type, if applicable</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Functions - Example</h2>
+			<ul>
+				<li>Writing a function to add 2 integers</li>
+				<pre><code data-trim>
+package main
+
+import "fmt"
+
+func add(x int, y int) int {
+	return x + y
+}
+
+func main() {
+	fmt.Println(add(42, 13))
+}
+				</code></pre>
+			</ul>
+		</section>
+		<section>
+			<h2>Functions - Example Output</h2>
+			<p>
+	  	<small><code>55</code></small>
+	  	</p>
+	  	<p style="color:#3366FF">
+	  	<small><code>Program exited.</code></small>
+	  	</p>
+		</section>
+	</section>
+	
+	<!-- Conclusion -->
+	<section>
+		<h2>Conclusion</h2>
+		<ul>
+			<li>Thank You!</li>
+			<li>This was just a very basic introduction to Go</li>
+			<li>A more detailed, more in depth look at Go can be found at <a href="tour.golang.org">tour.golang.org</a></li>
+		</ul>
+	</section>
+
+    </div>
+
+  </div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
