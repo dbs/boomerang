@@ -127,12 +127,6 @@ md-card > img {
     border-radius: 3px;
 }
 md-card a {
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 1;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
     color: #1565C0;
     text-decoration: initial;
 }
