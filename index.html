@@ -38,7 +38,7 @@
         <span itemprop="description" style="display: none;">Google Developers Group (GDG) Sudbury organizes meetings focused on software development efforts such as Android, HTML5, RDFa Lite and microdata, and other open source programming, open web, open data subjects.</span>
         <img itemprop="image" style="display: none;" src="images/gdg_sudbury_square.png">
 
-        <md-toolbar class="md-hue-2">
+        <md-toolbar class="md-hue-2 navBar">
             <div class="md-toolbar-tools">
                 <h2 flex>
                     <span ng-cloak>{{ mc.chapterName }}</span>
@@ -68,12 +68,13 @@
             <md-tab id="news-tab"><a class="navTabLink" href="#!/news">News</a></md-tab>
             <md-tab id="events-tab"><a class="navTabLink" href="#!/events">Events</a></md-tab>
             <md-tab id="activities-tab"><a class="navTabLink" href="#!/activities">What We Do</a></md-tab>
+            <md-tab id="organizers-tab"><a class="navTabLink" href="#!/organizers">Organizers</a></md-tab>
         </md-tabs>
         <div layout layout-margin layout-align="center start">
             <div ng-view flex-sm="100" flex-md="90" flex-lg="80" flex-gt-lg="75"></div>
         </div>
     </body>
-    <script src="https://apis.google.com/js/plusone.js" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!-- bower:js -->
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
