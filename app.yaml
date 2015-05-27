@@ -1,0 +1,14 @@
+application: gdgsudbury
+version: 3
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /(.*)
+  static_files: \1
+  upload: ^(app|bower_components|config|favicon.ico|go_codelab|images|index.html|views)
