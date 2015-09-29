@@ -13,11 +13,11 @@ angular.module('gdgXBoomerang')
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
         'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
         'cover' : {
-            title: 'Google I/O Extended 2015',
-            subtitle: 'Join us to watch the I/O keynote, enjoy some food, and enter a raffle for some swag!',
+            title: 'GDG DevFest 2015',
+            subtitle: 'Join us on October 17, 2015 for a full day of hands-on learning, with codelabs featuring AngularJS, Polymer, Chromecast, and more!',
             button: {
                 text: 'RSVP',
-                url: 'http://www.meetup.com/GDG-Sudbury/events/222024984/'
+                url: 'http://www.meetup.com/GDG-Sudbury/events/224917886/'
             }
         },
         'activities': {
