@@ -3,6 +3,8 @@ version: 3
 runtime: python27
 api_version: 1
 threadsafe: true
+skip_files:
+-    ^(.git|node_modules)$
 
 handlers:
 - url: /
