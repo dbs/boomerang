@@ -127,6 +127,10 @@ md-grid-list md-grid-tile md-grid-tile-footer h3 {
 md-card > img {
     border-radius: 3px;
 }
+gplus-person md-card > img,
+.description-card > img {
+    border-radius: 3px 3px 0 0;
+}
 md-card a {
     color: #1565C0;
     text-decoration: initial;
@@ -139,4 +143,10 @@ news-item-footer [id*="___plusone"] {
 }
 md-toolbar [id*="___plusone"] {
     padding-top: 5px !important;
+}
+md-toolbar {
+    margin: 0 !important;
+}
+.newsContent md-card {
+    margin: 0;
 }
