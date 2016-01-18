@@ -13,11 +13,11 @@ angular.module('gdgXBoomerang')
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
         'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
         'cover' : {
-            title: 'Chat with an Android game developer',
-            subtitle: "Join us as Aaron Langille, computer science professor and game developer, shares his experiences with cross-platform game development; the independent game dev industry; the Game Maker platform for development; promotion and marketing; and what's next for Vladimir.",
+            title: 'Android for Beginners Study Jam',
+            subtitle: "Join us every Wednesday in February from 5:30 PM to 8:30 PM to learn how to build Android apps. No experience necessary (really, not even programming experience)! And it's free!",
             button: {
                 text: 'RSVP',
-                url: 'http://www.meetup.com/GDG-Sudbury/events/227105092/'
+                url: 'http://www.meetup.com/GDG-Sudbury/events/228068287/'
             }
         },
         'activities': {
