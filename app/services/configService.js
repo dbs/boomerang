@@ -7,7 +7,7 @@ angular.module('gdgXBoomerang')
         'googleApi'     : 'AIzaSyCZz36CDoUcO7dM16TNDlI6N5vQQ-Lhwfk',
         'pwaId'         : '5915725140705884785', // Picasa Web Album id, must belong to Google+ id above
         'domain'        : 'http://gdgsudbury.ca',
-        //'twitter'       : 'gdgspacecoast',
+        'twitter'       : 'gdgsudbury',
         //'facebook'      : 'gdgspacecoast',
         'meetup'        : 'GDG-Sudbury',
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
