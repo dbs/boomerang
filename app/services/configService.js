@@ -13,11 +13,11 @@ angular.module('gdgXBoomerang')
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
         'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
         'cover' : {
-            title: 'Android for Beginners Study Jam',
-            subtitle: "Join us every Wednesday in February from 5:30 PM to 8:30 PM to learn how to build Android apps. No experience necessary (really, not even programming experience)! And it's free!",
+            title: 'Women in Technology Event',
+            subtitle: "Join us on March 15th from 5:00 PM to 9:00 PM to discuss women in technology: with a talk from a female CTO, Sarah Paajanen, a codelab lead by Sudbury's chapter of Ladies Learning Code and a game demo from some local students.",
             button: {
                 text: 'RSVP',
-                url: 'http://www.meetup.com/GDG-Sudbury/events/228068287/'
+                url: 'https://www.eventbrite.ca/e/women-in-technology-tickets-22046396365'
             }
         },
         'activities': {
