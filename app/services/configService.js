@@ -9,6 +9,7 @@ angular.module('gdgXBoomerang')
         'domain'        : 'http://gdgsudbury.ca',
         //'twitter'       : 'gdgspacecoast',
         //'facebook'      : 'gdgspacecoast',
+        //'youtube'       : 'UCkiYHK3IZMk5XsYZ626b9Rw',
         'meetup'        : 'GDG-Sudbury',
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
         'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
@@ -29,7 +30,8 @@ angular.module('gdgXBoomerang')
             // panels: true,
             designSprints: true,
             roundTables: true
-        }
+        },
+        'HUB_IP': 'https://hub.gdgx.io'
         // To update the snippet which is used for sharing, see the TODO in the index.html.
     };
 });

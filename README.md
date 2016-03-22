@@ -1,7 +1,7 @@
 GDG-X Boomerang
 =========
 
-[![Join the chat at https://gitter.im/gdg-x/boomerang](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gdg-x/boomerang?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/gdg-x/boomerang.svg)](https://travis-ci.org/gdg-x/boomerang) [![Join the chat at https://gitter.im/gdg-x/boomerang](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gdg-x/boomerang?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Boomerang is a template for a dynamic material design GDG chapter web site that can be deployed
 within 30 minutes. It pulls data from [GDG-X Hub](https://github.com/gdg-x/hub) and 
@@ -49,8 +49,7 @@ You must have Node.js installed to use the build tools. Download it [here](http:
 From the boomerang directory, run the following:
 
 1. `npm install`
-2. `bower install`
-3. `gulp`
+1. `gulp`
 
 Automated Testing
 ---------------
@@ -91,3 +90,28 @@ Sites using this template
 * http://gdg-brussels.org/
 * http://www.gdgschaumburg.com/
 * http://gdgdubai.com/
+* http://gdga-site.appspot.com/
+
+###Contributors
+See [list of contributors](https://github.com/gdg-x/boomerang/graphs/contributors)
+
+Maintainer: [Splaktar](https://github.com/Splaktar).
+
+######GDG Apps, GDG[x] are not endorsed and/or supported by Google, the corporation.
+
+License
+--------
+
+    © 2013-2016 GDG[x]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
