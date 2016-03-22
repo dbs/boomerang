@@ -14,11 +14,11 @@ angular.module('gdgXBoomerang')
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
         'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
         'cover' : {
-            title: 'Women in Technology Event',
-            subtitle: "Join us on March 15th from 5:00 PM to 9:00 PM to discuss women in technology: with a talk from a female CTO, Sarah Paajanen, a codelab lead by Sudbury's chapter of Ladies Learning Code and a game demo from some local students.",
+            title: 'Google Cloud Platform NEXT: streaming conference & codelabs',
+            subtitle: "Join us 2016-03-23 @ 11:30 to hear what's next for the Google Cloud Platform, and get hands-on!",
             button: {
                 text: 'RSVP',
-                url: 'https://www.eventbrite.ca/e/women-in-technology-tickets-22046396365'
+                url: 'http://www.meetup.com/GDG-Sudbury/events/229306628/'
             }
         },
         'activities': {
