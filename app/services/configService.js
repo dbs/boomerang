@@ -14,11 +14,11 @@ angular.module('gdgXBoomerang')
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
         'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
         'cover' : {
-            title: 'Google I/O Extended 2016 - May 26th @ 5:30 PM',
-            subtitle: "Recap, live Hangout focused on one of the exciting new features unveiled at I/O, and a codelab!",
+            title: 'Virtual Reality Sudbury',
+            subtitle: "Learn about creating Google VR games with Unity, and dig into the rapidly maturing A-Frame WebVR framework.",
             button: {
-                text: 'RSVP',
-                url: 'http://www.meetup.com/GDG-Sudbury/events/230559980/'
+                text: 'January 2017' //,
+                //url: 'http://www.meetup.com/GDG-Sudbury/events/230559980/'
             }
         },
         'activities': {
