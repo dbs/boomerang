@@ -14,11 +14,12 @@ angular.module('gdgXBoomerang')
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
         'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
         'cover' : {
-            title: 'Virtual Reality Sudbury',
-            subtitle: "Learn about creating Google VR games with Unity, and dig into the rapidly maturing A-Frame WebVR framework.",
+            title: 'Google Cloud Platform Next - Extended',
+            subtitle: 'Get a concentrated dose of the best from GCP Next, including a ' +
+		'technical keynote, one of the best talks from the conference, and one or more codelabs',
             button: {
-                text: 'January 2017' //,
-                //url: 'http://www.meetup.com/GDG-Sudbury/events/230559980/'
+                text: 'March 13, 2017',
+                url: 'http://www.meetup.com/GDG-Sudbury/events/237035902/'
             }
         },
         'activities': {
