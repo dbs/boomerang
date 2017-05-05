@@ -14,12 +14,12 @@ angular.module('gdgXBoomerang')
         // Change to 'EEEE, MMMM d, y - H:mm' for 24 hour time format.
         'dateFormat'    : 'EEEE, MMMM d, y - h:mm a',
         'cover' : {
-            title: 'Google Cloud Platform Next - Extended',
-            subtitle: 'Get a concentrated dose of the best from GCP Next, including a ' +
-		'technical keynote, one of the best talks from the conference, and one or more codelabs',
+            title: 'I/O Extended 2017 Sudbury!',
+            subtitle: 'Join us as we distill 2.5 days of Web and Android cutting-edge ' +
+                'development updates into a few social hours!',
             button: {
-                text: 'March 13, 2017',
-                url: 'http://www.meetup.com/GDG-Sudbury/events/237035902/'
+                text: 'June 9, 2017',
+                url: 'https://www.meetup.com/GDG-Sudbury/events/239341439/'
             }
         },
         'activities': {
