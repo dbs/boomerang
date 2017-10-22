@@ -1,32 +1,6 @@
 runtime: python27
-api_version: 1
-threadsafe: true
-skip_files:
--    ^(.git|node_modules)$
+threadsafe: false
 
 handlers:
-- url: /
-  static_files: index.html
-  upload: index.html
-
-- url: /app
-  static_dir: app
-
-- url: /bower_components
-  static_dir: bower_components
-
-- url: /config
-  static_dir: config
-
-- url: /favicon.ico
-  static_files: favicon.ico
-  upload: favicon.ico
-  
-- url: /go_codelab
-  static_dir: go_codelab
-
-- url: /images
-  static_dir: images
-
-- url: /views
-  static_dir: views
+- url: /.*
+  script: main.py
